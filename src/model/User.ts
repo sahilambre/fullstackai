@@ -1,11 +1,13 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-// Define message schema for type safety
+//* Define message schema for type safety
+//* defines the properties that a Message object should have.
 export interface Message extends Document {
   content: string;
   createdAt: Date;
 }
 
+//* define structure of message document
 const MessageSchema: Schema<Message> = new Schema({
   content: {
     type: String,
